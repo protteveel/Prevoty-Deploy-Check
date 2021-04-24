@@ -1,9 +1,7 @@
 # Prevoty-Deploy-Check
-
 Checks the deployment of Prevoty by analyzing the Prevoty Diagnostic log file.
 
 # Introduction
-
 This document describes how to check the deployment of Prevoty by analyzing the Prevoty Diagnostic log file.
 
 The analysis is based on a certain set of messages that need to appear in the Prevoty Diagnostic log.
@@ -22,7 +20,6 @@ These messages are based on:
 In the case where the certain set of messages appear more than once in the Prevoty Diagnostic log file, the tool will analyze the latest set of messages.
 
 # Preparations
-
 1. Get a copy of the tool PrevotyCheckLog.jar from the Prevoty Customer Success Portal here
 2. Copy PrevotyCheckLog.jar onto the server running Prevoty
 3. Get a copy of the Prevoty JVM arguments from the same server
@@ -43,7 +40,6 @@ In the case where the certain set of messages appear more than once in the Prevo
   1. This is the absolute path of the Prevoty Diagnostic log file, which we will analyze
 
 # Execution
-
 1. Log on to the server running Prevoty
 2. Open a terminal
 3. Go into the directory where you have copied PrevotyCheckLog.jar. E.g.:
@@ -73,6 +69,7 @@ java -jar ./PrevotyCheckLog.jar -v 3.6.7 -i manual -l /java -f /opt/Apache/Tomca
   1. A summary of the analysis. E.g.:
 
 |Prevoty Diagnostic Log Summary|
+|------------------------------|
 
 Prevoty version: \&lt; 3.9.0
 
@@ -86,7 +83,8 @@ Prevoty deployment check: OK
 
   1. A detailed analysis. E.g.:
 
-|Prevoty Diagnostic Log Analysis |
+|Prevoty Diagnostic Log Analysis|
+|-------------------------------|
 
 String 0: Found
 
@@ -154,7 +152,8 @@ Last occurrence: Sep 21 2018 21:33:02 UTC [server.startup : 0] INFO com.prevoty.
 
 1. If there are one or more messages missing in the Prevoty Diagnostic log, that information can be used to further investigate what might be wrong with the Prevoty deployment. E.g.:
 
-| Prevoty Diagnostic Log Summary |
+|Prevoty Diagnostic Log Summary|
+|------------------------------|
 
 Prevoty version: \&gt;= 3.9.0
 
@@ -166,7 +165,8 @@ Prevoty diagnostic log file path: /Users/percy.rotteveel/Documents/Prevoty/Custo
 
 Prevoty deployment check: ERROR
 
-| Prevoty Diagnostic Log Analysis |
+|Prevoty Diagnostic Log Analysis|
+|-------------------------------|
 
 String 0: Found
 
